@@ -1,5 +1,7 @@
 package com.example.springstarter.service;
 
+import com.example.springstarter.request.TestRequest;
+import com.example.springstarter.response.TestResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.stereotype.Service;
@@ -9,11 +11,13 @@ import java.util.*;
 @Service("testService")
 public class TestService {
 
-    public Map<String, String> test() {
-        Map<String, String> map = new HashMap<>();
+    public TestResponse test(TestRequest request) {
 
-        map.put("content", "Hello World!");
+        return new TestResponse("Hello " + request.getName() + "!");
+    }
 
-        return map;
+    public TestResponse add(TestRequest request) {
+
+        return new TestResponse(request.getA() + " + " + request.getB() + " = " + request.getA() + request.getB());
     }
 }
