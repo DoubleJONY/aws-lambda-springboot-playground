@@ -10,5 +10,5 @@ import java.io.Serializable;
 @Setter
 @AllArgsConstructor
 public class TestResponse implements Serializable {
-    String output;
+    private String output;
 }

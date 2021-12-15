@@ -1,0 +1,7 @@
+POST http://localhost:8080/mergeNumber
+Content-Type: application/json
+
+{
+  "a": 2,
+  "b": 13
+}

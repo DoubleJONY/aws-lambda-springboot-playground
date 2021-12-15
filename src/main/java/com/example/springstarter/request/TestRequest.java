@@ -14,7 +14,7 @@ import java.io.Serializable;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class TestRequest implements Serializable {
 
-    String name = "unknown";
-    int a = 0;
-    int b = 0;
+    private String name;
+    private int a;
+    private int b;
 }
